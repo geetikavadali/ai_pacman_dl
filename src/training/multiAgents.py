@@ -267,7 +267,7 @@ class ReflexAgent(Agent):
                 return -250
             if(pacPos == pos and g.scaredTimer > 1):
                 return 100
-        if(cgs.hasFood(pacPos[0], pacPos[1])):
+        if(cgs.hasFood(pacPos[0], pacPos[1])): 
             if(cgs.getNumFood() <= 1):
                 return 250
             return 1

@@ -106,7 +106,7 @@ class Configuration:
         return hash(x + 13 * y)
 
     def __str__(self):
-        return "(x,y)="+str(self.pos)+", "+str(self.direction)
+        return "(x,y)=" + str(self.pos) + ", " + str(self.direction)
 
     def generateSuccessor(self, vector):
         """
@@ -121,7 +121,7 @@ class Configuration:
         direction = Actions.vectorToDirection(vector)
         if direction == Directions.STOP:
             direction = self.direction  # There is no stop direction
-        return Configuration((x + dx, y+dy), direction)
+        return Configuration((x + dx, y + dy), direction)
 
 
 class AgentState:
@@ -134,7 +134,6 @@ class AgentState:
         self.configuration = startConfiguration
         self.isPacman = isPacman
         self.scaredTimer = 0
-        # state below potentially used for contest only
         self.numCarrying = 0
         self.numReturned = 0
 
@@ -294,7 +293,7 @@ class Grid:
 
 
 def reconstituteGrid(bitRep):
-    if type(bitRep) is not type((1, 2)):
+    if not isinstance(bitRep, type((1, 2))):
         return bitRep
     width, height = bitRep[:2]
     return Grid(width, height, bitRepresentation=bitRep[2:])
@@ -309,13 +308,13 @@ class Actions:
     A collection of static methods for manipulating move actions.
     """
     # Directions
-    _directions = {Directions.WEST:  (-1, 0),
-                   Directions.STOP:  (0, 0),
+    _directions = {Directions.NORTH: (0, 1),
+                   Directions.SOUTH: (0, -1),
                    Directions.EAST:  (1, 0),
-                   Directions.NORTH: (0, 1),
-                   Directions.SOUTH: (0, -1)}
+                   Directions.WEST:  (-1, 0),
+                   Directions.STOP:  (0, 0)}
 
-    _directionsAsList = [('West', (-1, 0)), ('Stop', (0, 0)), ('East', (1, 0)), ('North', (0, 1)), ('South', (0, -1))]
+    _directionsAsList = list(_directions.items())
 
     TOLERANCE = .001
 
@@ -394,6 +393,9 @@ class Actions:
 
 
 class GameStateData:
+    """
+
+    """
 
     def __init__(self, prevState=None):
         """
@@ -455,15 +457,15 @@ class GameStateData:
         for i, state in enumerate(self.agentStates):
             try:
                 int(hash(state))
-            except TypeError as e:
+            except TypeError(e):
                 print(e)
                 # hash(state)
-        return int((hash(tuple(self.agentStates)) + 13*hash(self.food) + 113 * hash(tuple(self.capsules)) + 7 * hash(self.score)) % 1048575)
+        return int((hash(tuple(self.agentStates)) + 13 * hash(self.food) + 113 * hash(tuple(self.capsules)) + 7 * hash(self.score)) % 1048575)
 
     def __str__(self):
         width, height = self.layout.width, self.layout.height
         map = Grid(width, height)
-        if type(self.food) == type((1, 2)):
+        if isinstance(self.food, type((1, 2))):
             self.food = reconstituteGrid(self.food)
         for x in range(width):
             for y in range(height):
@@ -536,7 +538,6 @@ class GameStateData:
             self.agentStates.append(AgentState(
                 Configuration(pos, Directions.STOP), isPacman))
         self._eaten = [False for a in self.agentStates]
-
 
 try:
     import boinc
@@ -616,7 +617,7 @@ class Game:
                 self.mute(i)
                 # this is a null agent, meaning it failed to load
                 # the other team wins
-                print("Agent %d failed to load" % i, file=sys.stderr)
+                print("Agent %d failed to load" % i)
                 self.unmute()
                 self._agentCrash(i, quiet=True)
                 return
@@ -638,7 +639,7 @@ class Game:
                             self.agentTimeout = True
                             self._agentCrash(i, quiet=True)
                             return
-                    except Exception as data:
+                    except Exception(data):
                         self._agentCrash(i, quiet=False)
                         self.unmute()
                         return
@@ -655,6 +656,7 @@ class Game:
             agent = self.agents[agentIndex]
             move_time = 0
             skip_action = False
+
             # Generate an observation of the state
             if 'observationFunction' in dir(agent):
                 self.mute(agentIndex)
@@ -669,7 +671,7 @@ class Game:
                             skip_action = True
                         move_time += time.time() - start_time
                         self.unmute()
-                    except Exception as data:
+                    except Exception(data):
                         self._agentCrash(agentIndex, quiet=False)
                         self.unmute()
                         return
@@ -715,7 +717,8 @@ class Game:
                             return
 
                     self.totalAgentTimes[agentIndex] += move_time
-                    # print "Agent: %d, time: %f, total: %f" % (agentIndex, move_time, self.totalAgentTimes[agentIndex])
+                    # print "Agent: %d, time: %f, total: %f" % (agentIndex,
+                    # move_time, self.totalAgentTimes[agentIndex])
                     if self.totalAgentTimes[agentIndex] > self.rules.getMaxTotalTime(agentIndex):
                         print("Agent %d ran out of time! (time: %1.2f)" % (
                             agentIndex, self.totalAgentTimes[agentIndex]), file=sys.stderr)
@@ -724,7 +727,7 @@ class Game:
                         self.unmute()
                         return
                     self.unmute()
-                except Exception as data:
+                except Exception(data):
                     self._agentCrash(agentIndex)
                     self.unmute()
                     return
@@ -738,7 +741,7 @@ class Game:
                 try:
                     self.state = self.state.generateSuccessor(
                         agentIndex, action)
-                except Exception as data:
+                except Exception(data):
                     self.mute(agentIndex)
                     self._agentCrash(agentIndex)
                     self.unmute()
@@ -769,7 +772,7 @@ class Game:
                     self.mute(agentIndex)
                     agent.final(self.state)
                     self.unmute()
-                except Exception as data:
+                except Exception(data):
                     if not self.catchExceptions:
                         raise
                     self._agentCrash(agentIndex)

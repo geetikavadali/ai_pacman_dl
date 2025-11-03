@@ -21,6 +21,7 @@ import util
 
 
 class GhostAgent(Agent):
+
     def __init__(self, index):
         self.index = index
 
@@ -68,7 +69,7 @@ class DirectionalGhost(GhostAgent):
 
         actionVectors = [Actions.directionToVector(
             a, speed) for a in legalActions]
-        newPositions = [(pos[0]+a[0], pos[1]+a[1]) for a in actionVectors]
+        newPositions = [(pos[0] + a[0], pos[1] + a[1]) for a in actionVectors]
         pacmanPosition = state.getPacmanPosition()
 
         # Select best actions given the state
@@ -88,6 +89,6 @@ class DirectionalGhost(GhostAgent):
         for a in bestActions:
             dist[a] = bestProb / len(bestActions)
         for a in legalActions:
-            dist[a] += (1-bestProb) / len(legalActions)
+            dist[a] += (1 - bestProb) / len(legalActions)
         dist.normalize()
         return dist
