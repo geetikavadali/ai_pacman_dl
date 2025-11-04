@@ -1,0 +1,1016 @@
+Episode 9902 | Won: True | Q(s,a): 394.40 | Reward: 93.00 | Epsilon: 0.000
+Pacman emerges victorious! Score: 505
+Episode 9903 | Won: True | Q(s,a): 396.26 | Reward: 96.00 | Epsilon: 0.000
+Pacman emerges victorious! Score: 505
+Episode 9904 | Won: True | Q(s,a): 577.17 | Reward: 96.00 | Epsilon: 0.000
+(base) geetika@geetikas-MacBook-Air src % python3 runner.py PacmanDQN 20                           
+
+=== capsuleClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== contestClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== mediumClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== minimaxClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== openClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== originalClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== powerClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== smallClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== testClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== trappedClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== trickyClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pacman_policy_net2.pt'
+
+
+=== Ranked (hardest → easiest) ===
+capsuleClassic    win%=  0.0   avg_score=     nan
+contestClassic    win%=  0.0   avg_score=     nan
+mediumClassic     win%=  0.0   avg_score=     nan
+minimaxClassic    win%=  0.0   avg_score=     nan
+openClassic       win%=  0.0   avg_score=     nan
+originalClassic   win%=  0.0   avg_score=     nan
+powerClassic      win%=  0.0   avg_score=     nan
+smallClassic      win%=  0.0   avg_score=     nan
+testClassic       win%=  0.0   avg_score=     nan
+trappedClassic    win%=  0.0   avg_score=     nan
+trickyClassic     win%=  0.0   avg_score=     nan
+(base) geetika@geetikas-MacBook-Air src % python3 runner.py PacmanDQN 20
+
+=== capsuleClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== contestClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== mediumClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== minimaxClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== openClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== originalClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== powerClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== smallClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== testClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== trappedClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== trickyClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 743, in <module>
+    args = readCommand(sys.argv[1:])  # Get game components based on input
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 588, in readCommand
+    pacman = pacmanType(agentOpts)  # Instantiate Pacman with agentArgs
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 62, in __init__
+    self.policy_net = torch.load('src/checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src/checkpoints/pacman_policy_net2.pt'
+
+
+=== Ranked (hardest → easiest) ===
+capsuleClassic    win%=  0.0   avg_score=     nan
+contestClassic    win%=  0.0   avg_score=     nan
+mediumClassic     win%=  0.0   avg_score=     nan
+minimaxClassic    win%=  0.0   avg_score=     nan
+openClassic       win%=  0.0   avg_score=     nan
+originalClassic   win%=  0.0   avg_score=     nan
+powerClassic      win%=  0.0   avg_score=     nan
+smallClassic      win%=  0.0   avg_score=     nan
+testClassic       win%=  0.0   avg_score=     nan
+trappedClassic    win%=  0.0   avg_score=     nan
+trickyClassic     win%=  0.0   avg_score=     nan
+(base) geetika@geetikas-MacBook-Air src % python3 runner.py PacmanDQN 20
+
+=== capsuleClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x4096 and 1024x512)
+
+
+=== contestClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x6528 and 1024x512)
+
+
+=== mediumClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x8704 and 1024x512)
+
+
+=== minimaxClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x768 and 1024x512)
+
+
+=== openClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x8448 and 1024x512)
+
+
+=== originalClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x38400 and 1024x512)
+
+
+=== powerClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x4352 and 1024x512)
+
+
+=== smallClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x4352 and 1024x512)
+
+
+=== testClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x896 and 1024x512)
+
+
+=== trappedClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x640 and 1024x512)
+
+
+=== trickyClassic ===
+Started Pacman DQN algorithm
+Model has been trained
+Traceback (most recent call last):
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 744, in <module>
+    runGames(**args)
+  File "/Users/geetika/ai_pacman_dl/src/pacman.py", line 704, in runGames
+    game.run()
+  File "/Users/geetika/ai_pacman_dl/src/game.py", line 735, in run
+    action = agent.getAction(observation)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanUtils.py", line 171, in getAction
+    move = self.getMove(state)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/pacmanDQN_Agents.py", line 118, in getMove
+    self.Q_found = self.policy_net(temp_current_state)        
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/ai_pacman_dl/src/DQN.py", line 30, in forward
+    x = F.relu(self.fc3(x.view(x.size(0), -1)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geetika/conda/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x10880 and 1024x512)
+
+
+=== Ranked (hardest → easiest) ===
+capsuleClassic    win%=  0.0   avg_score=     nan
+contestClassic    win%=  0.0   avg_score=     nan
+mediumClassic     win%=  0.0   avg_score=     nan
+minimaxClassic    win%=  0.0   avg_score=     nan
+openClassic       win%=  0.0   avg_score=     nan
+originalClassic   win%=  0.0   avg_score=     nan
+powerClassic      win%=  0.0   avg_score=     nan
+smallClassic      win%=  0.0   avg_score=     nan
+testClassic       win%=  0.0   avg_score=     nan
+trappedClassic    win%=  0.0   avg_score=     nan
+trickyClassic     win%=  0.0   avg_score=     nan
+(base) geetika@geetikas-MacBook-Air src % 

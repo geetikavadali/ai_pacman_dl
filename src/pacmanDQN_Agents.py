@@ -12,6 +12,10 @@ import torch.nn.functional as F
 from DQN import *
 import numpy as np
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
 #import other libraries
 import os
 import util
@@ -47,14 +51,21 @@ class PacmanDQN(PacmanUtils):
 
         # pytorch parameters
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+        # init parameters
+        self.width = args['width']
+        self.height = args['height']
+        self.num_training = args['numTraining']
 		
 		# init model
         if(model_trained == True):
-            self.policy_net = torch.load('pacman_policy_net.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
-            self.target_net = torch.load('pacman_target_net.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+            self.policy_net = torch.load('checkpoints/pacman_policy_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+            self.target_net = torch.load('checkpoints/pacman_target_net2.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
         else:
-            self.policy_net = DQN().to(self.device)
-            self.target_net = DQN().to(self.device)
+            num_input_channels=6
+            input_shape = (num_input_channels, self.height, self.width)
+            self.policy_net = DQN(num_inputs=num_input_channels, num_actions=4, input_shape=input_shape).to(self.device)
+            self.target_net = DQN(num_inputs=num_input_channels, num_actions=4, input_shape=input_shape).to(self.device)
 		
         self.policy_net.double()
         self.target_net.double()        
@@ -73,11 +84,6 @@ class PacmanDQN(PacmanUtils):
     
         else:
             self.epsilon = 0.0     # epsilon init value
-
-        # init parameters
-        self.width = args['width']
-        self.height = args['height']
-        self.num_training = args['numTraining']
         
         # statistics
         self.episode_number = 0
@@ -88,10 +94,16 @@ class PacmanDQN(PacmanUtils):
         self.replay_mem = deque()
         
 		# Q(s, a)
-        self.Q_global = []  
+        self.Q_global = []
 		
 		# open file to store information
         self.f= open("data_dqn.txt","a")
+
+        # Performance tracking
+        self.rewards_per_episode = []
+        self.avg_rewards = []
+        self.win_history = []
+        self.avg_win_rates = []
 
     def getMove(self, state): # epsilon greedy
         random_value = np.random.rand() 
@@ -170,33 +182,68 @@ class PacmanDQN(PacmanUtils):
             self.epsilon = max(epsilon_final, 1.00 - float(self.episode_number) / float(epsilon_step))
 
     def final(self, state):
-        # Next
         self.episode_reward += self.last_reward
 
-        # do observation
         self.terminal = True
         self.observation_step(state)
-        
-		# print episode information
-        print("Episode no = " + str(self.episode_number) + "; won: " + str(self.won) 
-		+ "; Q(s,a) = " + str(max(self.Q_global, default=float('nan'))) + "; reward = " +  str(self.episode_reward) + "; and epsilon = " + str(self.epsilon))
-		
-		# copy episode information to file
+
+        self.rewards_per_episode.append(self.episode_reward)
+        self.win_history.append(1 if self.won else 0)
+
+        print(f"Episode {self.episode_number} | Won: {self.won} | Q(s,a): {max(self.Q_global, default=float('nan')):.2f} "
+            f"| Reward: {self.episode_reward:.2f} | Epsilon: {self.epsilon:.3f}")
+
         self.counter += 1
-        if(self.counter % 10 == 0):
-            self.f.write("Episode no = " + str(self.episode_number) + "; won: " + str(self.won) 
-		+ "; Q(s,a) = " + str(max(self.Q_global, default=float('nan'))) + "; reward = " +  str(self.episode_reward) + "; and epsilon = " 
-		+ str(self.epsilon) + ", win percentage = " + str(self.win_counter / 10.0) + ", " + str(strftime("%Y-%m-%d %H:%M:%S", gmtime())) + "\n")
+        if self.counter % 10 == 0:
+            self.f.write(f"Episode {self.episode_number} | Won: {self.won} | Q(s,a): {max(self.Q_global, default=float('nan')):.2f} "
+                        f"| Reward: {self.episode_reward:.2f} | Epsilon: {self.epsilon:.3f}, "
+                        f"Win percentage: {self.win_counter / 10.0:.2f}, "
+                        f"{strftime('%Y-%m-%d %H:%M:%S', gmtime())}\n")
             self.win_counter = 0
 
-        if(self.counter % 500 == 0):
-            # save model
-            torch.save(self.policy_net, 'pacman_policy_net.pt')
-            torch.save(self.target_net, 'pacman_target_net.pt')
-        
-        if(self.episode_number % TARGET_REPLACE_ITER == 0):
+        # update target network periodically
+        if self.episode_number % TARGET_REPLACE_ITER == 0:
             print("UPDATING target network")
             self.target_net.load_state_dict(self.policy_net.state_dict())
+
+        # Compute and plot averages every 100 episodes
+        if len(self.rewards_per_episode) % 100 == 0:
+            avg_reward = np.mean(self.rewards_per_episode[-100:])
+            win_rate = np.mean(self.win_history[-100:]) * 100  # percentage
+
+            self.avg_rewards.append(avg_reward)
+            self.avg_win_rates.append(win_rate)
+
+            print(f"[INFO] Avg reward (last 100): {avg_reward:.2f} | Win rate: {win_rate:.1f}%")
+
+            # Plot average reward
+            plt.figure(figsize=(10,5))
+            plt.subplot(1,2,1)
+            plt.plot(np.arange(len(self.avg_rewards)) * 100, self.avg_rewards, '-o', color='blue')
+            plt.title('Average Reward (per 100 episodes)')
+            plt.xlabel('Episode')
+            plt.ylabel('Average Reward')
+            plt.grid(True)
+
+            # Plot win rate
+            plt.subplot(1,2,2)
+            plt.plot(np.arange(len(self.avg_win_rates)) * 100, self.avg_win_rates, '-o', color='green')
+            plt.title('Win Rate (per 100 episodes)')
+            plt.xlabel('Episode')
+            plt.ylabel('Win Rate (%)')
+            plt.grid(True)
+
+            plt.tight_layout()
+            plt.savefig("training_progress.png")
+            plt.close()
+
+            if self.episode_number % 50 == 0:
+                save_dir = "checkpoints"
+                os.makedirs(save_dir, exist_ok=True)
+                torch.save(self.policy_net, os.path.join(save_dir, "pacman_policy_net2.pt"))
+                torch.save(self.target_net, os.path.join(save_dir, "pacman_target_net2.pt"))
+                print(f"[INFO] Models saved at episode {self.episode_number}")
+
 
     def train(self):
         if (self.local_cnt > start_training):
