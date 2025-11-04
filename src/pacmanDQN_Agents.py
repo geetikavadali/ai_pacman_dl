@@ -10,12 +10,12 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 from DQN import *
+import numpy as np
 
 #import other libraries
 import os
 import util
 import random
-import numpy as np
 import time
 import sys
 
@@ -50,8 +50,8 @@ class PacmanDQN(PacmanUtils):
 		
 		# init model
         if(model_trained == True):
-            self.policy_net = torch.load('pacman_policy_net.pt').to(self.device)
-            self.target_net = torch.load('pacman_target_net.pt').to(self.device)
+            self.policy_net = torch.load('pacman_policy_net.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
+            self.target_net = torch.load('pacman_target_net.pt', weights_only=False, map_location=torch.device('cpu')).to(self.device)
         else:
             self.policy_net = DQN().to(self.device)
             self.target_net = DQN().to(self.device)
